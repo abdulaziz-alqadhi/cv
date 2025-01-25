@@ -1,126 +1,243 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
-/* القواعد العامة لجميع الأجهزة */
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Cairo', sans-serif;
+    font-family: cairo;
 }
 
-body {
-    line-height: 1.6;
-    padding: 0;
-    margin: 0;
+/* nav */
+header nav{
+    border-bottom: 1px solid #e0e0e0;
+    height: 55px;
+    font-weight: bolder;
 }
-
-/* تصميم القائمة العلوية */
 nav ul {
-    display: flex;
-    justify-content: space-around;
     background-color: #000;
-    padding: 10px 0;
-    list-style-type: none;
 }
-
 nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-    background-color: yellowgreen;
-    color: black;
-}
-
-/* تصميم الأقسام */
-section {
+    display: inline-block;
     padding: 20px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;   
     text-align: center;
-}
-
-.all-features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.feature {
-    width: calc(33.333% - 20px);
-    padding: 15px;
-    background: #f9f9f9;
+    /* width: 25%; */
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
+    padding: 10px;
+    transition: all .25s;
 }
-
-.feature:hover {
+ul li a:hover {
+    text-decoration: underline;
+    box-shadow: yellowgreen 1px 1px 5px;
     transform: scale(1.05);
 }
-
-.feature h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.feature p {
-    font-size: 14px;
-    color: #555;
-}
-
-/* الصور والنصوص */
-.my-header-bg img,
-.my-header-main-info-img img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-}
-
-/* النماذج */
-.form-contact {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.form-input {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
+a {
+    text-decoration: none;
+    text-align: center;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
 }
+a:hover {
+    text-decoration: underline;
+}
+/* end nav */
 
-.btn-send {
-    background-color: yellowgreen;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+
+/* main */
+.my-header-bg {
+    background-color: #f5f5f5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/background.webp");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.my-header-info {
+    margin: 10px;
+    display: flex;
+}
+.my-header-text {
+    text-align: right;
+    padding: 10px;
+}
+.my-header-text h1 {
+    font-size: 45px;
+    font-weight: bolder;
+}
+.my-header-text h2 {
+    color: red;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.my-name{
+    font-weight: 800;
+    color: red;
+}
+.my-title{
     font-size: 16px;
-    transition: all 0.3s ease;
+    text-align: justify;
+    line-height: 3;
+    font-weight: 600;
 }
-
-.btn-send:hover {
-    background-color: darkgreen;
+.my-header-main-info-img{
+    margin: 10px;
+    background-color: #f5f5f5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/background.webp");
+    background-size: cover;
+    background-attachment: fixed;
 }
+/* end main */
 
+
+/* features */
+.features:not(.cert), .black-courses{
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+}
+.cert, .our-contact{
+    padding: 10px;
+    border-radius: 10px;
+}
+.courses {
+    margin: 10px;
+    padding: 10px;
+}
+.features, .courses , .cert{
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+}
+.features h1, .courses h1, .cert h1{
+    margin-bottom: 50px;
+    color: red;
+    font-size: 38px;
+}
+.all-features{
+    display: flex;
+}
+.all-features:not(.first-courses) {
+    justify-content: space-evenly;
+}
+.feature {
+    text-align: center;
+    width: 25%;
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all .25s;
+}
+.feature h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: red;
+    font-size: 20px;
+}
+.feature p{
+    font-size: 18px;
+    margin: 5px auto;
+    line-height: 1.5;
+}
+.features .all-features .feature:hover, .black-courses .all-features .feature:hover {
+    box-shadow: yellowgreen 3px 3px 10px;
+    transform: scale(1.05);
+}
+.feature:hover {
+    box-shadow: 3px 3px 10px;
+    transform: scale(1.05);
+}
+.feature i{
+    font-size: 40px;
+    color: red;
+    margin-bottom: 10px;
+
+}
+/* end features */
+
+
+/* courses */
+.soon h1, .soon h3, .soon i{
+    text-align: center;
+    align-content: center;
+    color: yellowgreen;
+}
+.soon {
+    text-align: center;
+    align-content: center;
+    color: yellowgreen;
+}
+/* end courses */
+
+
+/* contact us */
+.our-contact{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    margin-top: 10px;
+    padding-top: 50px;
+}
+.our-contact h1{
+    margin-bottom: 50px;
+    color: red;
+    font-size: 38px;
+}
+.form-contact{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    background-color: #eee;
+    text-align: center;
+    transition: all .25s;
+    border-radius: 50px;
+}
+.form-contact:hover{
+    box-shadow: 3px 3px 10px;
+}
+.form-input{
+    margin-bottom: 20px;
+}
+.form-input input{
+    width: 70%;
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+.form-input textarea{
+    width: 69%;
+    height: 250px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+.btn-send{
+    background-color: red;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.25s;
+}
+.btn-send:hover{
+    background-color: rgb(245, 159,159);
+    cursor: pointer;
+}
+/* end contact us */
+
+
+/* footer */
+.copyright{
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: #fff;
+    margin-top: 30px;
+}
+/* end footer */
 /* --- وسائل تحسين التوافق مع الشاشات المختلفة باستخدام Media Queries --- */
 
 /* شاشات الهواتف المحمولة */
